@@ -31,9 +31,9 @@ class InputService:
         result = ""
         event = self._screen.get_event()
         if not event is None:
-            if event.key_code == 49:
+            if event.key_code == -1:
                 result = "'"
-            elif event.key_code == 50: 
+            elif event.key_code == 13: 
                 result = "*"
             elif event.key_code >= 97 and event.key_code <= 122: 
                 result = chr(event.key_code)
